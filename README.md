@@ -16,3 +16,11 @@ To use this on your own PCs, follow these steps :
 Voila! You can now see my website running on your browser and play around with it!
 
 Hope you like it!
+___________
+
+Project Includes -
+- Dynamic web pages
+- Register page which takes form data and stores to an online database
+- Image Upload
+- Category wise tabs in the discover page to show data of only the selected category
+- Data sorted alphabetically
