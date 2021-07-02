@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+	<title>COURSES- Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>COURSES</h1>
+		<h3>Dance, Drama & Dreams</h3>
+	</div>
+	<div class="fullbox" style="flex-direction: column;">
+	<div class="choices" id="courses_choices">
+		<div onmouseover="showcourses(1)" onmouseout="hidecourses(1)">
+			<h2>DANCE</h2>
+		
+			<div id="dancecourses" onmouseout="hidecourses(1)">
+				<ul>
+					<a href="#courseinfobox"><li onclick="courseinfo('d1')">Ballet</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('d2')">Contemporary</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('d3')">Bollywood</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('d4')">Kathak</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('d5')">Bharatnatyam</li></a>
+				</ul>
+			</div>
+		</div>
+
+		
+		<div onmouseover="showcourses(2)" onmouseout="hidecourses(2)">
+			<h2>ACTING</h2>
+		
+			<div id="actingcourses" onmouseout="hidecourses(2)">
+				<ul>
+					<a href="#courseinfobox"><li onclick="courseinfo('a1')">Screen Acting </li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('a2')">Theatre Acting </li></a>
+				</ul>
+			</div>
+		</div>
+
+		
+		<div onmouseover="showcourses(3)" onmouseout="hidecourses(3)">
+			<h2>INSTRUMENTS</h2>
+		
+			<div id="instrumentscourses" onmouseout="hidecourses(3)">
+				<ul>
+					<a href="#courseinfobox"><li onclick="courseinfo('i1')">Guitar</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('i2')">Keyboard</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('i3')">Violin</li></a>
+					<a href="#courseinfobox"><li onclick="courseinfo('i4')">Tabla</li></a>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+
+	<div class="fullbox" id="courseinfobox">
+		<div id="courseinfotext"><h2>CHOOSE A COURSE TO SEE MORE INFO</h2></div>
+	</div>
+	
+
+	<div id="extra">
+	</div>
+
+	
+	
+
+	
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+
+	
+	function showcourses(code){
+
+		if(code==1)
+		{
+			document.getElementById('dancecourses').style.display='block';
+		}
+		else if(code==2){
+			document.getElementById('actingcourses').style.display='block';
+
+		}
+		else if(code==3){
+			document.getElementById('instrumentscourses').style.display='block';
+
+		}
+
+	}
+
+	function hidecourses(code){
+
+		if(code==1)
+		{
+			document.getElementById('dancecourses').style.display='none';
+
+		}
+		else if(code==2){
+			document.getElementById('actingcourses').style.display='none';
+
+		}
+		else if(code==3){
+			document.getElementById('instrumentscourses').style.display='none';
+
+		}
+	}
+
+	var coursesobj = [[{
+		name:"Ballet Beginners Course",
+		code:'d1',
+		duration:12,
+		fees:72000,
+		instructor:"Mrs. Rose D'Souza"
+	},
+	{
+		name:"Contemporary Beginners Course",
+		code:'d2',
+		duration:3,
+		fees:30000,
+		instructor:"Mr. Terence Lewis"
+	},
+	{
+		name:"Bollywood Star Course",
+		code:'d3',
+		duration:4,
+		fees:32000,
+		instructor:"Mrs. Sneha Kapoor Gothi"
+	},
+	{
+		name:"Kathak Diploma Course",
+		code:'d4',
+		duration:12,
+		fees:72000,
+		instructor:"Miss Svetlana Tulasi"
+	},
+	{
+		name:"Bharatnatyam Diploma Course",
+		code:'d5',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	}],
+	[{
+		name:"Screen Acting Course",
+		code:'a1',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	},
+	{
+		name:"Stage Acting Course",
+		code:'a2',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	}],
+	[
+	{
+		name:"Guitar Diploma Course",
+		code:'i1',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	},
+	{
+		name:"Keyboard Diploma Course",
+		code:'i2',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	},
+	{
+		name:"Violin Diploma Course",
+		code:'i3',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	},
+	{
+		name:"Tabla Diploma Course",
+		code:'i4',
+		duration:12,
+		fees:72000,
+		instructor:"Miss S. Sivakumar"
+	}
+	]];
+
+
+	function courseinfo(code){
+		let i=0,j=0;
+		if(code=='d1')
+			{i=0;j=0;}
+		else if(code=='d2')
+			{i=0;j=1;}
+		else if(code=='d3')
+			{i=0;j=2;}
+		else if(code=='d4')
+			{i=0;j=3;}
+		else if(code=='d5')
+			{i=0;j=4;}
+		else if(code=='a1')
+			{i=1;j=0;}
+		else if(code=='a2')
+			{i=1;j=1;}
+		else if(code=='i1')
+			{i=2;j=0;}
+		else if(code=='i2')
+			{i=2;j=1;}
+		else if(code=='i3')
+			{i=2;j=2;}
+		else if(code=='i4')
+			{i=2;j=3;}
+
+
+		name=coursesobj[i][j].name;
+		code=coursesobj[i][j].code;
+		duration=coursesobj[i][j].duration;
+		fees=coursesobj[i][j].fees;
+		instructor=coursesobj[i][j].instructor;
+
+
+		document.getElementById('courseinfotext').innerHTML=`<h3><b>Course Name:</b> ${name}</h3>`+`<h3><b>Course Code:</b> ${code}</h3>`+`<h3><b>Course Duration:</b> ${duration} months</h3>`+`<h3><b>Course Fees:</b> Rs. ${fees}</h3>`+`<h3><b>Course instructor:</b> ${instructor}</h3>`;
+	}
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+
+
+
+	
+</script>
+</html>

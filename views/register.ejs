@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<title>Register - Artist Corner| Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body  onload="dpfunc()">
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>REGISTER</h1>
+		<h3>ARTIST CORNER</h3>
+	</div>
+
+	<div class="fullbox" id="registerpage_fullbox">
+		<form id="register" action="/artistcorner/register_submit" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>Name :</td>
+					<td><input type="text" name="name" style="width:100%"></td>
+				</tr>
+				<tr>
+
+					<td>Email ID :</td>
+					<td><input type="email" name="emailid" style="width:100%"></td>
+				</tr>
+				<tr>
+					<td>Gender :</td>
+					<td>
+						<ul id="genderlist" style="list-style:none; display: flex;flex-direction: row;">
+							<li><input type="radio" name="gender" value="female">Female</li>
+							<li><input type="radio" name="gender" value="male">Male</li>
+							<li><input type="radio" name="gender" value="lgbtq">LGBTQ+</li>
+						</ul>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Age :</td>
+					<td><input type="number" name="age"></td>
+				</tr>
+				<tr>
+					<td>City :</td>
+					<td><input type="text" name="city" style="width:100%"></td>
+				</tr>
+				<tr>
+					<td>Who are you? :</td>
+					<td>
+						<select name="artistcategory">
+							<option value="dancer">Dancer</option>
+							<option value="singer">Singer</option>
+							<option value="musician">Musician</option>
+							<option value="actor">Actor</option>
+							<option value="director">Director</option>
+							<option value="dancetrainer">Dance Trainer</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Profile Picture : </td>
+					<td>
+						<select id="dp" name="dp" onchange="dpfunc()">
+							<option value="default">Set a default picture</option>
+							<option value="custom">Upload a profile picture</option>
+						</select>
+						<input type="file" name="dpfile" id="dpfile" style="display: none;">
+					</td>
+				</tr>
+				<tr>
+					<td>Tell us a little about yourself and your work :</td>
+					<td><textarea rows="10" cols="50" name="bio"></textarea></td>
+				</tr>
+			</table>
+		</form>
+
+		<button type="submit" form="register">SUBMIT</button>
+	</div>
+		
+	<div id="motto">
+		<p>We don't force you to join our training course to use the studio space.</p>
+		<p><b>You choose</b></p>
+	</div>
+
+	<div class="choices">
+		
+	</div>
+
+	<!--<div id="extra">
+	</div>-->
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+	function dpfunc(){
+	if(document.getElementById("dp").value=='custom'){
+		document.getElementById("dpfile").style.display="inline-block";
+	}
+	else
+		document.getElementById("dpfile").style.display="none";
+}
+
+function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+</html>

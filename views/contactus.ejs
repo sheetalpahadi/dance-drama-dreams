@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<title>Contact Us | Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>CONTACT US</h1>
+		<h3>Dance, Drama & Dreams</h3>
+	</div>
+
+	<div class="fullbox" style="width:100%;">
+		<div class="callbackform" id="contactpageform">
+			<form id="contactpageform_form" action="/contactpageformsubmit" method="post">
+				<div>
+					<h1>DROP US A MESSAGE HERE!</h1>
+				</div>
+					<table>
+						<tr>
+							<td>Name: </td>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td>Contact No.: </td>
+							<td><input type="text" name="contactno"></td>
+						</tr>
+						<tr>
+							<td>Email ID:</td>
+							<td><input type="text" name="emailid"></td>
+						</tr>
+						<tr>
+							<td>Your query/suggestion/complaint: </td>
+							<td><textarea rows="10" cols="50"></textarea></td>
+						</tr>
+					</table>
+					<div>
+						<button form="contactpageform_form">Submit</button>
+						<button>Clear</button>
+					</div>
+			</form>
+		</div>
+	</div>
+
+
+	<div class="fullbox" id="contactpagebox1">
+
+		<div class="intro" style="width:60%;">
+			<h1>VISIT OUR OFFICE</h1>
+			<div style="padding-left:15px;">
+			<h3 style="padding-top:10px;">
+				ADDRESS: 
+			</h3>
+				
+			<p style="padding-left:15px;">
+			Nritya Shakti Studio<br>602, Shri Sai Corporate Park,<br>Opp. Laxmi Nagar Industrial Estate, Bangur Nagar, Goregaon West, Mumbai, Maharashtra 400104
+		</p>
+			<h3 style="padding-top:10px;">
+				CONTACT NO.: 
+			</h3>
+			<p style="padding-left:15px;">
+				097026 62960
+			</p>
+			<h3 style="padding-top:10px;">
+				EMAIL ID: 
+			</h3>
+			<p style="padding-left:15px;">
+				studio@nrityashakti.com
+			</p>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="fullbox" id="studiolocation">
+	</div>
+	
+	
+
+	
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+</html>

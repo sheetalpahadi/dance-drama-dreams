@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<title>HOME- Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>Dance, Drama & Dreams</h1>
+		<h3>Living the Fantasy...</h3>
+	</div>
+
+	<div class="fullbox">
+		<div class="intro" id="homeintro">
+			<h1>WELCOME!</h1>
+			<p>If you're the one who can't imagine your life without music & dance, then this is the perfect place for you. Live your dreams, build them and showcase it to the entire world.</p>
+			<p>
+				<ul>
+					<li>Learn</li>
+					<li>Practice</li>
+					<li>Perform</li>
+				</ul>
+			</p>
+		</div>
+
+		
+	</div>
+
+	<div id="motto">
+		<p>We don't force you to join our training course to use the studio space.</p>
+		<p><b>You choose</b></p>
+	</div>
+
+	<div class="choices" id="homechoices">
+		<div id="train">
+			<h2>Train</h2>
+			<p>Choose to learn the techniques with our world class tutors</p>
+		</div>
+
+		<div id="practice">
+			<h2>Practice</h2>
+			<p>Choose to own our practice studio for you and your team</p>
+		</div>
+
+		<div id="perform">
+			<h2>Perform</h2>
+			<p>Choose to build your dream show in our top-class auditorium</p>
+		</div>
+	</div>
+
+	<div class="callbackform" id="homecallbackform">
+			<form action="/submitcallback" method="post">
+				<div>
+					<h1>JOIN US!</h1>
+				</div>
+				<div>
+					<h3>Fill up this form to get a callback from our team!</h3>
+				</div>
+				<table>
+					<tr>
+						<td>Name: </td>
+						<td><input type="text" name="name"></td>
+					</tr>
+					<tr>
+						<td>Contact No.: </td>
+						<td><input type="text" name="contactno"></td>
+					</tr>
+					<tr>
+						<td>Email ID:</td>
+						<td><input type="text" name="emailid"></td>
+					</tr>
+				</table>
+					<div>
+						<button>Submit</button>
+						<button>Clear</button>
+					</div>
+				
+			</form>
+		</div>
+
+	<div id="extra">
+	</div>
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+</html>

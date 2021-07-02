@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>ABOUT US- Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>ABOUT US</h1>
+		<h3>Dance, Drama & Dreams</h3>
+	</div>
+
+
+
+	<div class="fullbox"  id="aboutus1">
+		<div class="intro">
+			<h1>WHY DID WE START DANCE, DRAMA & DREAMS?</h1>
+			<p>During the formative years, there were a lot of things that inhibited us from pursuing our passion. For some, it was lack of affordable training, for some it was lack of practice space, for some it was lack of exposure. And hence, we decided to take up these three specific issues and help eradicate them.
+			</p>
+
+			<p>
+				Some people have the skills, but no space and for space, they needed to enroll themselves in unnecessary courses they didn't want to.
+			</p>
+
+			<p>So, we created a program to make space available to such people.
+			</p>
+		</div>
+		<img src="/static/duet.jpg">
+
+	</div>
+	
+	<div class="fullbox" id="aboutus2">
+
+		<div class="intro">
+			<h1>WHO ARE WE?</h1>
+			<p>
+				We are enthusiastic and passionate art-lovers. We dream, breathe and create art. Most of us are dancers, some of us are actors as well. Some have a different primary profession, others are here full-time.
+			</p>
+			<p>
+				The most important thing that binds us all together is our never-ending habit of dreaming fantasies and putting our blood and sweat into bringing those artistic dreams and imaginations to life.
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="fullbox">
+
+		<div class="intro" id="aboutus3">
+			<h1>WHAT DO WE OFFER?</h1>
+			<p>
+				<ul style="display: flex;flex-direction: column;">
+					<li>Best trainers with courses structured at the most reasonable prices.</li>
+					<li>Studio spaces for rent without unnecessary terms and conditions.</li>
+					<li>Top-class auditorium to give your shows the most grand aesthetic looks, with production assistance.</li>
+				</ul>
+			</p>
+
+
+		</div>
+
+			</div>
+	<div class="fullbox">
+		<div id="aboutusimages">
+			<img src="/static/training.png">
+			<img src="/static/dancestudio.jpg">
+			<img src="/static/stage.jpg">
+		</div>
+	</div>
+
+	
+
+	
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+</html>

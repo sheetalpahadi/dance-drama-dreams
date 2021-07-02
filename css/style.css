@@ -1,0 +1,628 @@
+
+
+.fullbox{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color:rgba(0,0,0,0.8);
+	padding-bottom:20px;
+	padding-top:20px;
+	margin-top: 0px;
+}
+
+.intro{
+	width:55%;
+	color:white;
+	border-radius:30px;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	padding-left:30px;
+	padding-bottom:80px;
+
+
+}
+
+.intro p{
+	color:white;
+	font-size:18px;
+	margin:5px 0px;
+
+}
+
+.intro h1{
+	margin-top:70px;
+	color:white;
+	font-size:50px;
+}
+
+.intro ul{
+	display: flex;
+	flex-direction: row;
+
+}
+
+.intro ul li{
+	margin:0px 20px;
+	font-size:20px;
+}
+
+@media screen and (max-width:530px){
+	.intro p{
+		font-size:16px;
+	}
+
+	.intro h1{
+		font-size:35px;
+	}
+
+	.intro ul li{
+		font-size:16px;
+	}
+}
+
+
+.callbackform{
+	width:100%;
+	color:black;
+	border-radius:30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	font-weight:600;
+	padding:30px 0px;
+	margin-top:60px;
+
+	
+}
+
+.callbackform form{
+	background-color:rgba(255,255,255,0.5);
+	padding:50px;
+	border-radius:30px;
+	width:45%
+
+}
+
+#extra{
+	height:200px;
+}
+
+.callbackform div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.callbackform h1{
+	font-size:40px;
+	color:black;
+	position: relative;
+	top:-20px;
+}
+
+.callbackform h3{
+	font-weight: 600;
+	font-size:23px;
+	position: relative;
+	top:-20px;
+}
+
+.callbackform button{
+	padding: 5px 20px;
+	margin:0px 10px;
+	border-radius: 10px;
+	cursor:pointer;
+	border:none;
+}
+
+.callbackform button:hover{
+	background-color:black;
+	color:white;
+	transition: 0.5s;
+}
+
+.callbackform td{
+	padding:2px 5px;
+}
+
+.callbackform table{
+	margin-bottom:5px;
+
+}
+
+.callbackform form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#motto{
+	display: flex;
+	flex-direction:column;
+	color:white;
+	width:100%;
+	background-color:rgba(0, 0, 0,0.8);
+	background-color: rgb(252, 227, 246);
+
+	background-color:rgb(90,70,70);
+
+	color:rgb(0,0,0);
+	margin-bottom:60px;
+	font-size:20px;
+	font-weight: 400;
+	margin-top:0px;
+	height:100px;
+	align-items:center;
+	justify-content: center;
+
+}
+
+#motto p{
+	text-align: center;
+}
+
+.choices{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top:10px;
+	flex-wrap: wrap;
+}
+
+.choices div{
+	cursor:default;
+	background-color:rgba(0,0,0,0.8);
+	margin:10px;
+	margin-top:0px;
+	width:30%;
+	padding:30px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+.choices div:hover{
+	background-color:rgba(252, 3, 90,0.8);
+	color:black;
+	font-weight: 600;
+}
+
+/*------------------HOME PAGE RESPONSIVE-----------------------------*/
+@media screen and (max-width:840px){
+	#homeintro{
+		width:100%;
+	}
+}
+
+@media screen and (max-width: 670px){
+	#homechoices{
+		flex-direction: column;
+	}
+	#homechoices div{
+		width:100%;
+	}
+}
+
+@media screen and (max-width: 930px){
+	#homecallbackform form{
+		width:70%;
+	}
+}
+
+/*-----------------------------------------------*/
+
+/*-----------------ABOUT US------------------------------*/
+#aboutusimages{
+	display: flex; 
+	flex-direction:row;
+	width:100%;
+	justify-content: space-around;
+
+}
+
+#aboutusimages img{
+	width:28%;
+	border-radius:20px;
+	border:3px solid white;
+}
+
+#aboutus1 img{
+	width:328px;
+	height: auto;
+	border-radius:20px;
+}
+
+@media screen and (max-width:600px){
+	#aboutusimages{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#aboutusimages img{
+		width:90%;
+		margin-top:10px;
+	}
+}
+
+#aboutus1 div,#aboutus3 div{
+	width:70%;
+}
+#aboutus2{
+	background-image: url('../static/team2.jpg');
+	height:500px;
+	background-position:0% 90%;
+	background-size:120%;
+
+}
+
+#aboutus2 div{
+	width:60%;
+}
+
+@media screen and (max-width:710px){
+	#aboutus2{
+		background-size:cover;
+	}
+}
+
+@media screen and (max-width:500px){
+	#aboutus2 div{
+		width:80%;
+	}
+}
+
+
+
+
+@media screen and (max-width:850px){
+	#aboutus1{
+		flex-direction: column;
+	}
+
+	#aboutus1 div{
+		width:100%;
+	}
+
+	#aboutus1 img{
+		align-self: center;
+		margin-top:10px;
+	}
+
+
+}
+
+#aboutus3{
+	width:100%;
+	text-align:center;
+	padding-bottom:10px;
+}
+/*-----------------------------------------------*/
+
+
+/*-----------------REGISTER PAGE------------------------------*/
+
+@media screen and (max-width:930px){
+
+	#artistcornerchoices{
+		flex-direction: column;
+	}
+
+	#artistcorner1{
+		order:2;
+		width:70%;
+		text-align:center;
+	}
+
+	#artistcorner2{
+		order:3;
+		width:70%;
+		text-align:center;
+	}
+
+	#artistcornerimg{
+		order:1;
+	}
+}
+
+/*-----------------------------------------------*/
+
+
+
+/*----------------REGISTER - ARTIST CORNER ---------------------------*/
+
+#registerpage_fullbox{
+	justify-content: center;
+	width:100%;	
+	align-items:center;
+	flex-direction: column;
+}
+
+#registerpage_fullbox button{
+	padding:15px;
+	font-size:1.3rem;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius: 10px;
+	box-shadow: none;
+	background-color: rgba(252, 3, 90,0.8);
+	border:none;
+	color:white;
+}
+
+#registerpage_fullbox button:hover{
+	cursor:pointer;
+	background-color: rgba(252, 3, 90,1);
+	font-size:1.35rem;
+}
+
+#register{
+	width:50%;
+	font-size: 1.2rem;
+}
+
+#register table{
+	width:100%;
+}
+
+#register table tr{
+	padding-top:10px;
+}
+
+#register tr:hover{
+}
+
+#register td{
+	padding-left:5px;
+	padding-top:10px;
+	padding:5px 0px 5px 5px;
+}
+
+#genderlist{
+	list-style:none; 
+	display: flex;
+	flex-direction: row;
+}
+
+#genderlist li{
+	margin-right:10px;
+}
+
+#genderlist input{
+	margin-right:5px;
+}
+
+#register table tr td input{
+	width:90%;
+}
+
+@media screen and (max-width:990px){
+	#register{
+		width:90%;
+	}
+}
+
+@media screen and (max-width:600px){
+	#register table tr{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	
+}
+
+/*----------------------DISCOVER PAGE----------------------*/
+
+
+#discoverpage_choices{
+	padding-bottom:50px;
+	flex-wrap:wrap;
+}
+
+#discoverpage_choices div{
+	border-radius: 30px;
+	border:2px solid rgb(252, 3, 90);
+	margin-top: 0px;
+	min-width:280px;
+
+}
+
+
+#discoverpage_choices div:hover{
+	border-radius: 30px;
+	border:none;
+	background-color: rgb(150,150,150);
+}
+
+
+#categorytab{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	font-size: 1.1rem;
+	margin-bottom: 0px;
+	margin-top:20px;
+}
+
+#categorytab ul{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	color:black;
+	width:100%;
+	justify-content: center;
+	align-items: flex-end;
+	margin-top:10px;
+	flex-wrap:wrap;
+}
+
+#categorytab li{
+	padding:5px 30px;
+	background-color:blanchedalmond;	
+	border:2px solid black;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	cursor: pointer;
+}
+
+#categorytab a{
+	color:black;
+}
+
+#categorytab li:hover{
+	background-color: white;
+}
+
+#categorytab li.active{
+	background-color: white;
+	font-size: 1.3rem;
+
+}
+
+.tab{
+	background-color:blanchedalmond;	
+	font-size:1.1rem;
+
+}
+
+
+
+/*----------------------COURSES PAGE--------------------------*/
+
+#courses_choices{
+	align-items:flex-start;
+}
+
+#courses_choices div{
+	flex-direction: column;
+	cursor:pointer;
+	
+}
+
+
+#courses_choices div div{
+	width:100%;
+	text-align:center;
+}
+
+#courses_choices div div ul{
+	list-style:none;
+}
+
+#courses_choices div div li:hover{
+	color:hotpink;
+}
+
+#dancecourses, #actingcourses, #instrumentscourses{
+	display: none;
+	background-color: black;
+	color:white;
+
+}
+
+#dancecourses:hover, #actingcourses:hover, #instrumentscourses :hover{
+	background-color: black;
+	color:white;
+}
+
+#courseinfobox{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#courseinfobox div{
+	text-align:left;
+	padding:10px;
+	padding-top:50px;
+}
+
+@media screen and (max-width:600px){
+	#courses_choices{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#courses_choices div{
+		width:70%;
+	}
+}
+
+/*-----------------------CONTACT US PAGE----------------------*/
+
+
+#contactpageform{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding:0px;
+	margin-top:20px;
+	margin-bottom:70px;
+
+}
+#contactpageform form{
+	width:70%;
+	margin:0px;
+	background-color: rgb(30,30,30,0.8);
+	color:white;
+}
+
+#contactpageform h1{
+	color:white;
+}
+#contactpageform input{
+width:100%;
+border-radius:10px;
+}
+
+#contactpageform textarea{
+	border-radius:10px;
+}
+
+#contactpageform button{
+	font-size:1rem;
+}
+
+#contactpagebox1{
+	background-image: url('../static/officeinside6.jpg');
+	height:500px;
+	background-position:-200px 0%;
+	background-size:cover;
+}
+
+#contactpagebox1 h1, #contactpagebox1 p, #contactpagebox1 h3{
+	color:pink;
+}
+
+@media screen and (max-width:900px){
+	#contactpageform form{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:580px){
+	#contactpageform form table tr{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	#contactpageform form table tr input{
+		width:90vw;
+	}
+}

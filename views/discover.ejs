@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<title>Discover - Artist Corner| Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+
+<body onload="tabdetect('<%= tab %>')">
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>DISCOVER</h1>
+		<h3>ARTIST CORNER</h3>
+	</div>
+
+	<div id="categorytab">
+			<ul>
+				<a href="/artistcorner/discover_dancer"><li id="tab1" class="active" onclick="tabchange(this)">Dancer</li></a>
+				<a href="/artistcorner/discover_singer"><li id="tab2" class="inactive" onclick="tabchange(this)">Singer</li></a>
+				<a href="/artistcorner/discover_musician"><li id="tab3" class="inactive" onclick="tabchange(this)">Musician</li></a>
+				<a href="/artistcorner/discover_actor"><li id="tab4" class="inactive" onclick="tabchange(this)">Actor</li></a>
+				<a href="/artistcorner/discover_director"><li id="tab5" class="inactive" onclick="tabchange(this)">Director</li></a>
+				<a href="/artistcorner/discover_dancetrainer"><li id="tab6" class="inactive" onclick="tabchange(this)">Dance Trainer</li></a>
+			</ul>
+		</div>
+	<div class="fullbox" id="discoverpage_fullbox">
+		
+
+		<div class="choices" id="discoverpage_choices">
+			<% if(data.length==0){ %>
+				<div>
+					<h2>No Results Found!</h2>
+				</div>
+		<% } %>
+			<% data.forEach(function(element){ %>
+
+					<div>
+						<img src="/static/<%= element.dp %>" height="150px">
+						<br>
+						<h2><%= element.name %> </h2>
+						<h4> <%= element.artistcategory %> </h4>
+						<p>Email ID: <%= element.emailid %> </p>
+						<p>Gender: <%= element.gender %></p>
+						<p>Age: <%= element.age %></p>
+						<p>City: <%= element.city %></p>
+						<p>Bio: <%= element.bio %></p>
+					</div>
+
+					<% console.log(element.dp) %>
+
+
+
+			<% }); %>
+		</div>
+
+
+	</div>
+	<div id="extra">
+	</div>
+
+	<%- include('footerbar.ejs') %>
+
+	<script>
+	function tabchange(tab){
+
+		document.getElementsByClassName('active')[0].className='inactive';
+		tab.className='active';
+	}
+
+	function tabdetect(tabvalue){
+		console.log(tabvalue);
+		if(tabvalue=='dancer'){
+			tabchange(document.getElementById('tab1'));
+		}
+
+		else if(tabvalue=='singer'){
+			tabchange(document.getElementById('tab2'));
+		}
+
+		else if(tabvalue=='musician'){
+			tabchange(document.getElementById('tab3'));
+		}
+
+		else if(tabvalue=='actor'){
+			tabchange(document.getElementById('tab4'));
+		}
+
+		else if(tabvalue=='director'){
+			tabchange(document.getElementById('tab5'));
+		}
+
+		else if(tabvalue=='dancetrainer')
+		{
+			tabchange(document.getElementById('tab6'));
+		}
+	}
+
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+
+</body>
+
+</html>
+

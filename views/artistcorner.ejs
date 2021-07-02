@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>Artist Corner- Dance, Drama & Dreams</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/base.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<%- include("navbar.ejs") %>
+
+	<div id="header">
+		<h1>ARTIST CORNER</h1>
+	</div>
+
+	<div class="fullbox">
+		
+	<div class="choices" id="artistcornerchoices">
+		<div id="artistcorner1">
+			<a href="/artistcorner/register">
+
+			<h2>Register</h2>
+			<p>Add yourself to our artist page to showcase your excellent artistic profile</p>
+		</a>
+		</div>
+
+		<div style="height:400px;padding-top:10px;" id="artistcornerimg">
+			<img src="/static/background1.jpg" height="380px">
+		</div>
+
+		<div id="artistcorner2">
+			<a href="/artistcorner/discover">
+
+			<h2>Discover</h2>
+			<p>Discover some super-talented artists across the country</p>
+		</a>
+		</div>		
+		</a>
+	</div>
+</div>
+
+	<div id="extra">
+	</div>
+
+	<%- include('footerbar.ejs') %>
+</body>
+<script>
+	function togglemenu(){
+		if(	document.getElementById('navbarlist').style.display=='none'){
+			document.getElementById('navbarlist').style.display='flex';
+		}
+		else if(document.getElementById('navbarlist').style.display='flex'){
+			document.getElementById('navbarlist').style.display='none';
+		}
+	}
+</script>
+</html>
