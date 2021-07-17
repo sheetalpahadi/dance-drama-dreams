@@ -1,23 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<title>Discover - Artist Corner| Dance, Drama & Dreams</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Best Dance Studio in India">
+	<meta name="keywords" content="dance, studio, studio rent, best dance studio, india, music, acting, artist">
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="stylesheet" href="/static/base.css">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+	<title>Discover - Artist Corner| Dance, Drama & Dreams</title>
 </head>
 
 <body onload="tabdetect('<%= tab %>')">
 	<%- include("navbar.ejs") %>
 
-	<div id="header">
+	<header id="header">
 		<h1>DISCOVER</h1>
 		<h3>ARTIST CORNER</h3>
-	</div>
+	</header>
 
-	<div id="categorytab">
+	<nav id="categorytab">
 			<ul>
 				<a href="/artistcorner/discover_dancer"><li id="tab1" class="active" onclick="tabchange(this)">Dancer</li></a>
 				<a href="/artistcorner/discover_singer"><li id="tab2" class="inactive" onclick="tabchange(this)">Singer</li></a>
@@ -26,8 +29,9 @@
 				<a href="/artistcorner/discover_director"><li id="tab5" class="inactive" onclick="tabchange(this)">Director</li></a>
 				<a href="/artistcorner/discover_dancetrainer"><li id="tab6" class="inactive" onclick="tabchange(this)">Dance Trainer</li></a>
 			</ul>
-		</div>
-	<div class="fullbox" id="discoverpage_fullbox">
+	</nav>
+
+	<section class="fullbox" id="discoverpage_fullbox">
 		
 
 		<div class="choices" id="discoverpage_choices">
@@ -58,7 +62,7 @@
 		</div>
 
 
-	</div>
+	</section>
 	<div id="extra">
 	</div>
 

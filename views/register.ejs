@@ -1,22 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<title>Register - Artist Corner| Dance, Drama & Dreams</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Best Dance Studio in India">
+	<meta name="keywords" content="dance, studio, studio rent, best dance studio, india, music, acting, artist">
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="stylesheet" href="/static/base.css">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+	<title>Register - Artist Corner| Dance, Drama & Dreams</title>
 </head>
+
 <body  onload="dpfunc()">
 	<%- include("navbar.ejs") %>
 
-	<div id="header">
+	<header id="header">
 		<h1>REGISTER</h1>
 		<h3>ARTIST CORNER</h3>
-	</div>
+	</header>
 
-	<div class="fullbox" id="registerpage_fullbox">
+	<section class="fullbox" id="registerpage_fullbox">
 		<form id="register" action="/artistcorner/register_submit" method="post" enctype="multipart/form-data">
 			<table>
 				<tr>
@@ -78,20 +82,13 @@
 		</form>
 
 		<button type="submit" form="register">SUBMIT</button>
-	</div>
+	</section>
 		
 	<div id="motto">
 		<p>We don't force you to join our training course to use the studio space.</p>
 		<p><b>You choose</b></p>
 	</div>
-
-	<div class="choices">
-		
-	</div>
-
-	<!--<div id="extra">
-	</div>-->
-
+	
 	<%- include('footerbar.ejs') %>
 </body>
 <script>

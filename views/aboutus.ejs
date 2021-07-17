@@ -1,24 +1,29 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<title>ABOUT US- Dance, Drama & Dreams</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Best Dance Studio in India">
+	<meta name="keywords" content="dance, studio, studio rent, best dance studio, india, music, acting, artist">
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="stylesheet" href="/static/base.css">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
+
+	<title>About Us | Dance, Drama & Dreams</title>
 </head>
+
 <body>
 	<%- include("navbar.ejs") %>
 
-	<div id="header">
+	<header id="header">
 		<h1>ABOUT US</h1>
 		<h3>Dance, Drama & Dreams</h3>
-	</div>
+	</header>
 
 
 
-	<div class="fullbox"  id="aboutus1">
+	<section class="fullbox"  id="aboutus1">
 		<div class="intro">
 			<h1>WHY DID WE START DANCE, DRAMA & DREAMS?</h1>
 			<p>During the formative years, there were a lot of things that inhibited us from pursuing our passion. For some, it was lack of affordable training, for some it was lack of practice space, for some it was lack of exposure. And hence, we decided to take up these three specific issues and help eradicate them.
@@ -33,9 +38,9 @@
 		</div>
 		<img src="/static/duet.jpg">
 
-	</div>
+	</section>
 	
-	<div class="fullbox" id="aboutus2">
+	<section class="fullbox" id="aboutus2">
 
 		<div class="intro">
 			<h1>WHO ARE WE?</h1>
@@ -48,9 +53,9 @@
 
 		</div>
 
-	</div>
+	</section>
 
-	<div class="fullbox">
+	<section class="fullbox">
 
 		<div class="intro" id="aboutus3">
 			<h1>WHAT DO WE OFFER?</h1>
@@ -68,17 +73,14 @@
 			</div>
 	<div class="fullbox">
 		<div id="aboutusimages">
-			<img src="/static/training.png">
-			<img src="/static/dancestudio.jpg">
-			<img src="/static/stage.jpg">
+			<img src="/static/training.png" alt="Best Training">
+			<img src="/static/dancestudio.jpg" alt="Spacious Dance Studio">
+			<img src="/static/stage.jpg" alt="Grand Stage">
 		</div>
-	</div>
-
+	</section>
 	
-
-	
-
 	<%- include('footerbar.ejs') %>
+
 </body>
 <script>
 	function togglemenu(){

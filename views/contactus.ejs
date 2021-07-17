@@ -1,23 +1,27 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<title>Contact Us | Dance, Drama & Dreams</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Best Dance Studio in India">
+	<meta name="keywords" content="dance, studio, studio rent, best dance studio, india, music, acting, artist">
 	<link rel="stylesheet" href="/static/style.css">
 	<link rel="stylesheet" href="/static/base.css">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet"> 
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+	<title>Contact Us | Dance, Drama & Dreams</title>
 </head>
+
+
 <body>
 	<%- include("navbar.ejs") %>
 
-	<div id="header">
+	<header id="header">
 		<h1>CONTACT US</h1>
 		<h3>Dance, Drama & Dreams</h3>
-	</div>
+	</header>
 
-	<div class="fullbox" style="width:100%;">
+	<section class="fullbox" style="width:100%;">
 		<div class="callbackform" id="contactpageform">
 			<form id="contactpageform_form" action="/contactpageformsubmit" method="post">
 				<div>
@@ -47,10 +51,10 @@
 					</div>
 			</form>
 		</div>
-	</div>
+	</section>
 
 
-	<div class="fullbox" id="contactpagebox1">
+	<section class="fullbox" id="contactpagebox1">
 
 		<div class="intro" style="width:60%;">
 			<h1>VISIT OUR OFFICE</h1>
@@ -78,18 +82,36 @@
 			
 		</div>
 
-	</div>
+	</section>
 
-	<div class="fullbox" id="studiolocation">
-	</div>
-	
-	
-
-	
+	<section class="fullbox" id="studiolocation">
+		<div id='map' style='width: 600px; height: 400px;'></div>
+		<div><h1>CHECK OUT THE MAP TO FIND US</h1></div>
+		
+	</section>
 
 	<%- include('footerbar.ejs') %>
+	
 </body>
 <script>
+		mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlZXRhbHBhaGFkaSIsImEiOiJja3FpaWU1N3gwNHF5MnZtbzZ3OWYwaHp1In0.cuPlYbrAxEMzCeqR-PMd3A';
+		var map = new mapboxgl.Map({
+		container: 'map', // container ID
+		style: 'mapbox://styles/mapbox/streets-v11', // style URL
+		center: [72.831693,19.16131395781074], // starting position [lng, lat]
+		zoom: 13 // starting zoom
+		});
+
+		// Set options
+	var marker = new mapboxgl.Marker({
+    color: "red",
+    draggable: false
+    }).setLngLat([72.831693,19.16131395781074])
+    .addTo(map);
+    map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('studiolocation')}));
+    var nav = new mapboxgl.NavigationControl({showZoom:true,showCompass:false});
+	map.addControl(nav, 'bottom-right');
+
 	function togglemenu(){
 		if(	document.getElementById('navbarlist').style.display=='none'){
 			document.getElementById('navbarlist').style.display='flex';
